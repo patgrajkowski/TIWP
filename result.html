@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Wyniki</title>
+</head>
+<body>
+    <div class = wrapper>
+        <div class = 'window'>
+            <div id="progressbar" style = 'min-width: 500px;'></div>
+            <span id = result></span>
+            <span class = 'next-button' id = 'back-button'>Wróć</span>
+        </div>
+    </div>
+</body>
+<script>
+    const result = JSON.parse(localStorage.getItem("finalScore"));
+    document.getElementById('result').innerHTML = `Uzyskałeś ${localStorage.getItem('score')}/15 punktów<br>`
+    result.forEach(element => {
+        document.getElementById('result').innerHTML += `${element}<br>`;
+    });
+    document.getElementById('back-button').addEventListener('click', () => {
+        localStorage.setItem('finalScore', 0);
+        location.replace('./index.html')
+    });
+</script>
+</html>
