@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Nauka Angielskiego</title>
+</head>
+<body>
+    <div class = wrapper>
+        <div class = 'window'>
+            <label class = 'language-label'>Wyświetlaj słówka w języku:</label>
+            <select class = select-language id = 'language'>
+                <option>Angielski</option>
+                <option>Polski</option>
+            </select>
+            <label class = 'type-label'>Tryb nauki:</label>
+            <select class = select-mode id = 'mode'>
+                <option>Test</option>
+                <option>Ćwiczenia</option>
+                </select>
+                <span class = 'select-button' id = 'select-button'>Zatwierdź</span>
+                <span class = 'next-button' id = 'author-button'>O autorze</span>
+                <div id="dialog" title="O autorze">
+                    <p>Autor: Patryk Grajkowski ISI3</p>
+                </div>
+        </div>
+    </div>
+
+</body>
+</html>
